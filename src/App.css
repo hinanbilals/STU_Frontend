@@ -1,0 +1,242 @@
+/* .App {
+  text-align: center;
+} */
+.notFound{
+  text-align: center;
+    margin-top: 20%;
+}
+.forBoxShade{
+  box-shadow: none !important;
+}
+ .borderDisable{
+  border:none;
+}
+
+#simple-tabpanel-0 .css-19kzrtu
+{
+  padding:0;
+  padding-left:25px;
+  padding-right:25px;
+  margin-top:5px;
+ 
+}
+#simple-tabpanel-1 .css-19kzrtu
+{
+ padding:0;
+ padding-left:25px;
+ padding-right:25px;
+ margin-top:15px;
+ 
+}
+
+.postDetailCard{
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.LeaderBoardMain hr{
+  border:1px solid transparent;
+  border-top:1px solid #b8b8b8;
+}
+.personInList
+{
+  position:relative;
+  display: flex;
+  align-items: center;
+}
+ 
+.rankInList{
+  padding-top:16px;
+  padding-left: 1%;
+  position:absolute;
+}
+.thumbInList{
+ padding-right: 2%;
+}
+
+.loadProfile{
+  margin: auto;
+  padding-top:70%
+}
+.loadPostDetail{
+ text-align: center;
+  padding-top:20% 
+}
+.ProfileMain
+{
+  text-align: center;
+  align-items: center;
+
+}
+.ProfileMain .ProfileImage img
+{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+ }
+
+
+ .ProfileName{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.listStyle{
+    padding: 15px 0px;
+
+     display: flex;
+     align-items: center;
+}
+ 
+.listUSerImage
+{
+  width: 50px;
+  height: 50px; 
+  border: none; 
+   
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.listUSerImage span{
+  margin-left: 16px !important;
+}
+
+.signTeam{
+  text-align: center;
+  margin-top: 30vh;
+}
+.signTeam div{
+       
+      width: 50%; 
+      margin: auto;
+      padding: 10%;
+      background: #f5f2f2;
+      border-radius: 10px;
+}
+.ListInMap{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+ padding-bottom: 5px;
+ padding-top: 5px;
+ justify-content: space-between ;
+}
+
+ .tableSet{
+  overflow-y: scroll !important;
+  height: 79% !important;
+  background-color: pink;
+ }
+
+ .rowSetting{
+   width:100%;
+ }
+
+/* dashboard */
+.UserListDataTable
+{
+  background-color:gray;
+  color:white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.thmbsupMain
+{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* user details */
+ 
+
+.accordianWidth .shadowHide
+{
+  box-shadow: none;
+
+}
+ 
+.mainHeadingInfo
+{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px !important;
+  padding-bottom: 20px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+
+}
+.listStyleSet li
+{
+  cursor: pointer;
+  text-align: left;
+  margin-top: 12px;
+  font-weight: bold;
+
+  list-style-type: none;
+ 
+}
+.listStyleSet li:hover
+{
+  color: rgb(99, 99, 99);
+}
+.setBorder{
+  background-color: aliceblue;
+  border-radius: 20px;
+
+}
+/* end user detail */
+
+/* thumbs up on dashboard  */
+
+/* .thumbsDetailAlign .MuiDataGrid-columnHeaderTitleContainer{
+display: flex !important;
+justify-content: center !important;
+} */
+
+/* end thumbs up on dashboard */
+
+@media screen and (max-width: 576px) {
+  .SubGrid{
+    /* max-height: 1% !important; */
+    max-height: 200px !important;
+  }
+  .ProfileBlock{
+    height: 550px;
+    
+  }
+ 
+}
+@media screen and (min-width: 576px) {
+  .SubGrid{
+    max-height: 200px !important;
+   }
+   .ProfileBlock{
+    height: 700px;
+     
+  }
+ 
+}
+
+@media screen and (min-width: 768px) {
+  .SubGrid{
+    max-height: 300px !important;
+   }
+   .ProfileBlock{
+    height:  850px;
+     
+  }
+   
+}
+@media screen and (min-width: 992px) {
+  .SubGrid{
+    max-height: 500px !important;
+   }
+   .ProfileBlock{
+     height: 80%;
+    
+   
+   }
+    
+}
+
