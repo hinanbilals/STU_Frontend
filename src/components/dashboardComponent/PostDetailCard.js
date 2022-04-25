@@ -18,11 +18,11 @@ const PostDetailCard=(props)=> {
   return (
       <div>
 
-    <Card sx={{ maxWidth: '100%' }}>
-      <div className='postDetailCard'>
+    <Card sx={{ maxWidth: '100%'  }}>
+      <div  className='postDetailCard'>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: '#7B83EB' }} aria-label="recipe">
              {message.senderName.toUpperCase().charAt(0)}
           </Avatar>
         }
@@ -37,7 +37,7 @@ const PostDetailCard=(props)=> {
 
 <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: '#7B83EB' }} aria-label="recipe">
           {message.mentionedName.toUpperCase().charAt(0)}
           </Avatar>
         }

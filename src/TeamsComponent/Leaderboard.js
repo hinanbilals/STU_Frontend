@@ -20,6 +20,7 @@ import { useContext } from "react";
 import { BaseUrlContext } from 'src/BaseUrlContext';
 import { red } from '@mui/material/colors';
 import CardHeader from '@mui/material/CardHeader';
+
 import Avatar from '@mui/material/Avatar';
 
 // import { useHistory } from 'react-router-dom';
@@ -234,15 +235,19 @@ function Leaderboard() {
 
                           <TableCell  align="center"   >{id + 1}</TableCell>
                           <TableCell align="left" className='rowSetting img-fluid' >
+                          
+                          
+                           
                           <CardHeader
                             avatar={
-                              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                              <Avatar sx={{ bgcolor: '#7B83EB' }} aria-label="recipe">
                                 {thumbs.name.toUpperCase().charAt(0)}
                               </Avatar>
                             }
                             
                           />
                             <span>{thumbs.name}</span>
+                            
                           </TableCell>
                           <TableCell align="right" >{thumbs.thumbsup + " 👍"}</TableCell>
                             

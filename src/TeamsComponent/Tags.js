@@ -210,7 +210,7 @@ function Tags() {
 
                         <TableContainer component={Paper} sx={{ height: 550 }}>
                         {tagslisting !== '' ? 
-                            <Table sx={{ height: 400 }} aria-label="simple table">
+                            <Table style={{backgroundColor:'#9096ee'}} sx={{ height: 400 }} aria-label="simple table">
                                 <TableHead>
                                     <TableRow>
                                         <TableCell align="center" >Count</TableCell>
@@ -224,7 +224,7 @@ function Tags() {
 
                                     {tagslisting.map((tags, id) => (
 
-                                        <TableRow key={id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }} >
+                                        <TableRow style={{backgroundColor:'#e9eafc'}} key={id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }} >
                                             <TableCell align="center" >{tags.Total_hash_used}</TableCell>
                                             <TableCell align="center" >{tags.hashtag}</TableCell>
                                         </TableRow>

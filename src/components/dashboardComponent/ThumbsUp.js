@@ -8,25 +8,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from "react";
 import { BaseUrlContext } from 'src/BaseUrlContext';
+import {GridColumns, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 
+//const columns: GridColDef[] = [
 
-const columns = [
-
-  { field: 'id', headerName: '#', flex: 1, headerClassName: 'UserListDataTable' },
-  { field: 'senderName', headerName: 'Sender Name', flex: 3, headerClassName: 'UserListDataTable' },
-  { field: 'mentionedName', headerName: 'Receiver name', flex: 3, headerClassName: 'UserListDataTable' },
-  { field: 'teamName', headerName: 'Team', flex: 3, headerClassName: 'UserListDataTable' },
-  { field: 'Number_of_Thumbsup', headerName: 'Thumbs Up', flex: 3, headerClassName: 'UserListDataTable' },
-  {
-    title: "Details", headerName: 'Details', flex: 3, headerClassName: 'UserListDataTable thumbsDetailAlign',
-    renderCell: (params) => (
-      <Link style={{ textAlign: 'center' }} to={'/thumbs-up/post-details/' + params.row.senderID + "/" + params.row.mentionedID + "/" + params.row.teamID} ><FontAwesomeIcon icon={faEye} /></Link>
-      // <Link style={{textAlign:'center'}} to={'/thumbs-up/post-details/'+1+'/'+2} ><FontAwesomeIcon icon={faEye} /></Link>
-
-    ),
-  },
-
+  const columns: GridColumns = [ 
+    { field: 'id', headerName: '#', flex: 1 },
+    { field: 'senderName', headerName: 'Sender Name', flex: 3 },
+    { field: 'mentionedName', headerName: 'Receiver name', flex: 3 },
+    { field: 'teamName', headerName: 'Team', flex: 3 },
+    { field: 'Number_of_Thumbsup', headerName: 'Thumbs Up', flex: 3},
+    {
+      title: "Details", headerName: 'Details', flex: 3, headerClassName: ' thumbsDetailAlign',
+      renderCell: (params) => (
+        <Link style={{ textAlign: 'center' }} to={'/thumbs-up/post-details/' + params.row.senderID + "/" + params.row.mentionedID + "/" + params.row.teamID} ><FontAwesomeIcon icon={faEye} /></Link>
+        // <Link style={{textAlign:'center'}} to={'/thumbs-up/post-details/'+1+'/'+2} ><FontAwesomeIcon icon={faEye} /></Link>
+  
+      ),
+    },
+  
 ];
+
 
 // const rows = [
 //   { id: 1, mentionedName: 'Snow', senderName: 'Jon',teamName:'Drupal', Number_of_Thumbsup: 35, status: 1 },
@@ -159,7 +161,7 @@ const ThumbsUp = () => {
 
       <div style={{ height: 550, width: '100%' }}>
 
-        <DataGrid style={{ backgroundColor: 'lightgray' }}
+        <DataGrid style={{ backgroundColor:'#e9eafc' }}
           rows={rows !== '' ? rows : ''}
           columns={columns}
           // getRowId={(rows) => rows.id}

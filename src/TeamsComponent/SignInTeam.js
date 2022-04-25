@@ -20,8 +20,8 @@
       const { instance } = useMsal();
   
       return (
-        <div className="signTeam">
-          <div>
+        <div style={{backgroundColor:'#e9eafc'}} className="signTeam">
+          <div style={{backgroundColor:'#e9eafc'}}>
             <p>Please sign in with your Microsoft account to access ThumbsUp.</p>
           <Button variant="contained" className="ml-auto" onClick={() => handleLogin(instance)}> SignIn to ThumbsUp <LoginIcon  style={{marginLeft:"7px"}}/> </Button>
 

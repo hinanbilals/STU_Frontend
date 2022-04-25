@@ -68,11 +68,11 @@ const User = (props) => {
   return (
     <>
       <div>
-        <h4>Users Detail:</h4>
+        <h4>Users Details</h4>
       </div>
       <div  style={{ height: 560, width: '100%' }}>
 
-        <DataGrid 
+        <DataGrid style={{ backgroundColor:'#e9eafc' }} 
           rows={rows !== '' ? rows : ''}
           columns={columns}
           pageSize={10}

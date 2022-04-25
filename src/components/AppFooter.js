@@ -3,8 +3,8 @@ import { CFooter } from '@coreui/react'
 
 const AppFooter = () => {
   return (
-    <CFooter>
-      <div>
+    <CFooter style={{ backgroundColor: 'White' }}>
+      <div >
         <a href="/#" target="_blank" rel="noopener noreferrer">
           ThumbsUp
         </a>

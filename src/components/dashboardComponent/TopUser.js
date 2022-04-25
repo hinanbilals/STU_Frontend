@@ -3,15 +3,16 @@ import { DataGrid, GridToolbarContainer, GridToolbarExport } from '@mui/x-data-g
 import { useHistory } from 'react-router-dom'
 import { useContext } from "react";
 import { BaseUrlContext } from 'src/BaseUrlContext';
-const columns = [
-  { field: 'id', headerName: '#', flex: 1, headerClassName: 'UserListDataTable' },
+import {GridColumns, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+import { red } from '@mui/material/colors';
 
-  { field: 'name', headerName: 'User Name', flex: 3, headerClassName: 'UserListDataTable', },
-  { field: 'thumbsup', headerName: 'Thumbs Up', flex: 3, headerClassName: 'UserListDataTable', },
-
-
-];
-
+const columns: GridColumns = [ 
+  { field: 'id', headerName: 'ID#', flex:1, headerClassName: 'super-app-theme--header' },
+    { field: 'name', headerName: 'User Name', flex:3 },
+    { field: 'thumbsup', headerName: 'Thumbs Up', flex:3 },
+  
+  ];
+  
 // const rows = [
 //     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
 //     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
@@ -68,7 +69,7 @@ const TopUser = () => {
           }
 
     fetchMyAPI()
-  })
+  },[])
 
 
   return (
@@ -77,7 +78,7 @@ const TopUser = () => {
         <h4>Top Users</h4>
       </div>
       <div style={{ height: 560, width: '100%' }}>
-        <DataGrid style={{ backgroundColor: 'lightgray' }}
+        <DataGrid style={{ backgroundColor:'#e9eafc' }}
           rows={rows !== '' ? rows : ''}
           columns={columns}
           pageSize={7}

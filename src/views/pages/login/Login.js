@@ -80,7 +80,7 @@ if(localStorage.getItem('user-info'))
                     </CInputGroup>
                     <CRow>
                       <CCol xs={6}>
-                        <CButton color="primary" onClick={SetLogin} className="px-4">
+                        <CButton style={{backgroundColor:'#464EB8'}}  onClick={SetLogin} className="px-4">
                           Login
                         </CButton>
                       </CCol>
@@ -93,7 +93,7 @@ if(localStorage.getItem('user-info'))
                   </CForm>
                 </CCardBody>
               </CCard>
-              <CCard className="text-white bg-primary py-5" style={{ width: '44%' }}>
+              <CCard className="text-white  py-5" style={{ width: '44%' , backgroundColor:'#464EB8'}}>
                 <CCardBody className="text-center">
                   <div>
                     <h2>Sign up</h2>
