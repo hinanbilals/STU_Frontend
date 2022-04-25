@@ -5,16 +5,16 @@ import { useHistory } from 'react-router-dom'
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import { useContext } from "react";
 import { BaseUrlContext } from 'src/BaseUrlContext';
+import {GridColumns, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 
-const columns = [
-  { field: 'id', headerName: '#', flex: 1, headerClassName: 'UserListDataTable' },
-
-  { field: 'name', headerName: 'User Name', flex: 3, headerClassName: 'UserListDataTable', },
-  { field: 'thumbsup', headerName: 'Thumbs Up', flex: 3, headerClassName: 'UserListDataTable' },
-
-
+//const columns: GridColDef[] = [
+  const columns: GridColumns = [ 
+{ field: 'id', headerName: 'ID#', flex:1, headerClassName: 'super-app-theme--header' },
+  { field: 'name', headerName: 'User Name', flex:3 },
+  { field: 'thumbsup', headerName: 'Thumbs Up', flex:3 },
 
 ];
+
 
 // const rows = [
 //     { id: 1, name: 'Snow', firstName: 'Jon', thumbsup: 35,image:"https://st.depositphotos.com/1637787/2927/i/950/depositphotos_29270411-stock-photo-happy-man-working-with-laptop.jpg" },
@@ -64,14 +64,15 @@ const User = (props) => {
       }
   }
     fetchMyAPI()
-  })
+  },[])
   return (
     <>
       <div>
         <h4>Users Details</h4>
       </div>
       <div style={{ height: 560, width: '100%' }}>
-        <DataGrid style={{ backgroundColor: 'lightgray' }}
+
+        <DataGrid 
           rows={rows !== '' ? rows : ''}
           columns={columns}
           pageSize={10}

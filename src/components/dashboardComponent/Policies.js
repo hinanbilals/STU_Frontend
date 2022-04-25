@@ -62,6 +62,7 @@ const Policies = () => {
             id="filled-number"
             label="ThumbsUp"
             type="number"
+            
             value={thumbsup}
             onChange={(e) => {
               setThumbsup(e.target.value)

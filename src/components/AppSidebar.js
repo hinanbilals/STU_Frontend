@@ -14,7 +14,7 @@ const AppSidebar = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CSidebar
+    <CSidebar style={{ backgroundColor: '#7B83EB' }}
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -22,7 +22,7 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
+      <CSidebarBrand  className="d-none d-md-flex" to="/">
         {/* <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} /> */}
          {/* <img src="./images/dashboard_logo.png" height={65}  className='sidebar-brand-full' /> */}

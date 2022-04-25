@@ -18,6 +18,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import { useContext } from "react";
 import { BaseUrlContext } from 'src/BaseUrlContext';
+import { red } from '@mui/material/colors';
+import CardHeader from '@mui/material/CardHeader';
+import Avatar from '@mui/material/Avatar';
+
 // import { useHistory } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -219,21 +223,29 @@ function Leaderboard() {
                   <Table sx={{ height: 400 }} aria-label="simple table">
                     
                     <TableBody>
-                      <TableRow>
+                      <TableRow >
                         <TableCell align="left" >Rank</TableCell>
                         <TableCell align="left">Person</TableCell>
                         <TableCell align="right">Thumbs</TableCell>
 
                       </TableRow>
                       {thumbs.map((thumbs, id) => (
-                        <TableRow key={id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }} >
+                        <TableRow style={{backgroundColor:'#e9eafc'}} key={id}  sx={{ '&:last-child td, &:last-child th': { border: 0 } }} >
 
-                          <TableCell align="center"   >{id + 1}</TableCell>
-                          <TableCell align="left" className='rowSetting img-fluid' ><img className='listUSerImage' src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt='not found' />
+                          <TableCell  align="center"   >{id + 1}</TableCell>
+                          <TableCell align="left" className='rowSetting img-fluid' >
+                          <CardHeader
+                            avatar={
+                              <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                                {thumbs.name.toUpperCase().charAt(0)}
+                              </Avatar>
+                            }
+                            
+                          />
                             <span>{thumbs.name}</span>
                           </TableCell>
                           <TableCell align="right" >{thumbs.thumbsup + " 👍"}</TableCell>
-
+                            
                         </TableRow>
                       ))}
                     </TableBody>
